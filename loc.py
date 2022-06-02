@@ -20,8 +20,12 @@ def test_1():
     assert [1, 2
             ] == iloc_0.values.tolist() == loc_0.values.tolist(), 'loc 2 error'
 
+    # 看看下面的区别,索引下标和索引值的区别
     iloc_01 = pf.iloc[0:2]
-    assert [[1, 2], [3, 4]] == iloc_01.values.tolist(), 'loc 3 error'
+    loc_01 = pf.loc[0:1]
+    assert [[1, 2], [
+        3, 4
+    ]] == iloc_01.values.tolist() == loc_01.values.tolist(), 'loc 3 error'
 
 
 def test_2():
